@@ -1,3 +1,8 @@
+"""
+Dynamic Program for the Rod Cutting (maximising product) Problem as taught in class. 
+28th January, 2020
+"""
+
 def calc_max(result,n):
 	for i in range(2,n+1):
 		for j in range(1,i//2+1):
