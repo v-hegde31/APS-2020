@@ -1,3 +1,7 @@
+"""
+Dynamic Programming for Longest Subsequence Problem as taught in class.
+January, 28th, 2020
+"""
 def commonSubseq(s1,s2):
     LCS = [[0 for j in range(len(s2)+1)] for i in range(len(s1)+1)]
     for i in range(1,len(s1)+1):
