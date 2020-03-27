@@ -1,0 +1,39 @@
+"""
+Created on Sun Dec  2 00:36:32 2018
+validating a phone number
+"""
+import re
+number = input("Enter a number: ")
+flag1 = 0
+flag2 = 0
+flag3 = 0
+flag4 = 0
+pattern1 = re.compile(r'0\d{10}')
+match1 = pattern1.finditer(number)
+for i in match1:
+    flag1 = 1
+if (flag1 == 1):
+    print("Valid telephone number")
+    pattern3 = re.compile(r'0836\d{7}')
+    match3 = pattern3.finditer(number)
+    for i in match3:
+        flag3=1
+    if (flag3 == 1):
+        print("Belongs to Hubli.")
+    
+    
+else:
+    pattern2 = re.compile(r'\d{10}')
+    match2 = pattern2.finditer(number)
+    for i in match2:
+        flag2 = 1
+    if(flag2 == 1):
+        print("Valid phone number")
+        pattern4 = re.compile(r'944\d{7}')
+        match4 = pattern4.finditer(number)
+        for i in match4:
+            flag4=1
+        if (flag4 == 1):
+            print("BSNL number")
+    else:
+        print("Invalid number")
