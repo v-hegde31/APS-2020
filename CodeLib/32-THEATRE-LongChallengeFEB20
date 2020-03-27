@@ -1,0 +1,29 @@
+from itertools import permutations
+Alpha = ["A","B","C","D"]
+timing = [12,3,6,9]
+T = int(input())
+plist = []
+for _ in range(T):
+    Pay =[[0 for i in range(4)]for j in range(4)]
+    N = int(input())
+    for i in range(N):
+        a,t = input().split(" ")
+        t=int(t)
+        Pay[Alpha.index(a)][timing.index(t)] += 1
+    permut=list(permutations([0,1,2,3]))
+    MAX=-(10**10-1)
+    for i in permut:
+        temp=[Pay[j][i[j]] for j in range(4)]
+        temp.sort(reverse=True)
+        profit,ticket=0,100
+        for j in temp:
+            if j==0:
+                profit-=100
+            else:
+                
+                profit+=j*ticket
+                ticket-=25
+        MAX=max(MAX,profit)
+    plist.append(MAX)
+    print(MAX)
+print(sum(plist))
