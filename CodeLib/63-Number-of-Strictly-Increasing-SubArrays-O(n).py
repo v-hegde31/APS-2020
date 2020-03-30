@@ -11,9 +11,9 @@ def increasingSubArray(N,A):
             length+=1
         else:
             len = 1
-            count += (((legth-1)*length)//2)
+            count += (((length-1)*length)//2)
     if len>1:
-        count += (((legth-1)*length)//2)
+        count += (((length-1)*length)//2)
     break
 
 if "__name__" == "__main__":
