@@ -1,5 +1,5 @@
 """
-March 20, 2020
+March 30, 2020
 Brute Force code for number of strictly increasing subarrays in a given Array. 
 Time Complexity: O(n^2)
 """
