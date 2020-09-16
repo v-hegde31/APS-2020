@@ -1,5 +1,8 @@
 """
-Using Hashmap to include already traversed part of list, while checking for the compliment of the current index in the list in the hashmap.
+Using Hashmap to include already traversed part of list, while checking for the compliment (S-i) of the current index (i) in the list in the hashmap.
+
+Space Complexity: O(n)
+Time Complexity: O(n)
 """
 
 T = int(input())
